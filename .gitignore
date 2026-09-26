@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Mac file explorer object
+.DS_Store
+
+# Vim swap
+*.swp

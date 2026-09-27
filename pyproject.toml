@@ -34,6 +34,7 @@ Repository = "https://github.com/Schoyen/sinc-dvr.git"
 dev = [
     "ruff>=0.16.1",
     "mypy>=2.3.1",
+    "pytest>=9.1.1",
 ]
 
 

@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools >= 80", "setuptools_scm[simple] >= 8"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "sinc-dvr"
+dynamic = ["version"]
+dependencies = [
+  "numpy >= 2.5.1",
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Øyvind Sigmundson Schøyen", email = "8521134+Schoyen@users.noreply.github.com"},
+]
+description = "Sinc-DVR basis functions for 1D, 2D and 3D"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+]
+
+
+[project.urls]
+Repository = "https://github.com/Schoyen/sinc-dvr.git"
+"Bug Tracker" = "https://github.com/Schoyen/sinc-dvr/issues"
+
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.1",
+    "mypy>=2.3.1",
+]
+
+
+[tool.setuptools_scm]
+version_file = "src/sinc_dvr/_version.py"
+
+
+[tool.ruff.lint]
+extend-select = [
+    "I", # isort
+]
+ignore = [
+    "E741", # Ignore ambigious variable name
+]
+
+
+[tool.ruff]
+exclude = ["*.ipynb", "venv", ".venv"]
